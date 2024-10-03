@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<!--<html lang="en" data-bs-theme="dark">-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Joe Perry - blah blah test</title>
+    <link rel="stylesheet" href="../../assets/main.css">
+    <!--this is the external bootstrap cdn link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper">
+    <main>
+
+        <h1>Uncovering Network Vulnerabilities with Metasploit in Kali Linux</h1>
+
+        <p>As security professionals, it's essential to stay up-to-date with the latest tools and techniques for identifying potential vulnerabilities within your organization's networks.</p>
+
+        <h2>Prerequisites:</h2>
+
+        <ul>
+            <li>Kali Linux (64-bit) installed on your machine</li>
+            <li>Familiarity with basic Linux commands</li>
+            <li>Understanding of networking fundamentals</li>
+        </ul>
+
+        <h3>Step 1: Setting Up Metasploit</h3>
+
+            <p>Before diving into scanning, ensure that you have the latest version of Metasploit installed in Kali Linux. Open a terminal and run the following command:</p>
+            
+            <p><code>sudo apt-get update &amp;&amp; sudo apt-get install metasploit-framework</code></p>
+            
+            <p>Once installed, start the Metasploit console by running:</p>
+
+            <p><code>msfconsole</code></p>
+        
+
+        <h3>Step 2: Creating a New Session</h3>
+
+            <p>In the Metasploit console, create a new session using the following command:</p>
+
+            <p><code>use auxiliary/scanner/discovery/nectus</code></p>
+            
+            <p>This will initiate a discovery scan to identify hosts on your network.</p>
+
+        <h3>Step 3: Configuring Scan Options (Optional)</h3>
+
+            To customize your scan, you can specify options like IP ranges or specific hosts. For example, to scan the entire local network:
+
+            <p><code>set RHOSTS 192.168.1.0/24</code></p>
+
+            <p>You can also set a timeout for each host:</p>
+
+            <p><code>set TIMEOUT 5s</code></p>
+
+            <h3>Step 4: Running the Scan</h3>
+
+            <p>To execute the discovery scan, enter:</p>
+
+            <p><code>run</code></p>
+
+            <p>This will begin scanning your network for hosts.</p>
+
+        <h3>Step 5: Identifying Vulnerabilities (Optional)</h3>
+
+            <p>Once you've discovered potential targets, you can run a vulnerability scan using exploit modules. 
+                For example, to identify vulnerabilities in web applications using the "auxiliary/scanner/http/http-vuln-cve-2007-0198" module:</p>
+
+            <p><code>use auxiliary/scanner/http/http-vuln-cve-2007-0198</code></p>
+
+            <p>Configure the options as needed and run the scan.</p>
+
+        <h3>Step 6: Analyzing Results</h3>
+
+            <p>After completing a scan, analyze the results to identify potential vulnerabilities. 
+                Use tools like nmap or masscan to cross-reference findings with your network topology.</p>
+
+        <h2>Conclusion:</h2>
+
+            <p>Using Metasploit in Kali Linux is an effective way to scan networks for vulnerabilities and identify weaknesses in various systems and services. 
+                By following this tutorial, you've learned how to set up and use Metasploit to uncover potential threats within your organization's networks.</p>
+                
+            <p>Remember, a proactive approach to security involves regular scanning and analysis of network vulnerabilities. 
+                Regularly update your knowledge and stay current with the latest tools and techniques to ensure your organization remains secure.</p>
+
+        <h2>Additional Resources:</h2>
+
+        <ul>
+            <li><a href="https://www.metasploit.com/docs/" target="_blank">Metasploit Official Documentation</a></LI>
+            <li><a href="https://docs.kali.org/" target="_blank">Kali Linux Documentation</a></li>
+        </ul>
+
+        <p><i>This tutorial is for educational purposes only. Always obtain proper authorization before scanning any network or system, and
+                ensure that you comply with all applicable laws and regulations regarding security testing.</i></p>
+
+    </div>
+
+    <p><a href="../../cybersec.html">Back to Cybersecurity Resources</a></p>
+
+    <!--need to load the script per the docs-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous">
+    </script>
+    </main> 
+    </div>
+</body>
+</html>
