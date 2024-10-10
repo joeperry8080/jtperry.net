@@ -1,8 +1,8 @@
-#wrapper {
+.wrapper {
     margin: 10px;
   }
 
-#footer_text {
+.footer_text {
     text-align: center;
 
 }
